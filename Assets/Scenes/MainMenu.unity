@@ -119,6 +119,77 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &134333694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 134333697}
+  - component: {fileID: 134333696}
+  - component: {fileID: 134333695}
+  m_Layer: 0
+  m_Name: Prototype Network Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &134333695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134333694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ba5764f4714bd64ab9efab127938e77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Unity::Fusion.FusionBootstrapDebugGUI
+  EnableHotkeys: 0
+  BaseSkin: {fileID: 11400000, guid: e59b35dfeb4b6f54e9b2791b2a40a510, type: 2}
+--- !u!114 &134333696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134333694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88230848386761045af440d808ee3efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Unity::Fusion.FusionBootstrap
+  RunnerPrefab: {fileID: 1772593914}
+  StartMode: 0
+  AutoStartAs: 2
+  AutoHideGUI: 0
+  AutoClients: 1
+  ClientStartDelay: 0.1
+  ServerPort: 0
+  DefaultRoomName: 
+  InitialScenePath: 
+  _currentStage: 0
+  AutoConnectVirtualInstances: 1
+  VirtualInstanceConnectDelay: 1
+--- !u!4 &134333697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134333694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486632531
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +430,7 @@ GameObject:
   - component: {fileID: 641876533}
   - component: {fileID: 641876532}
   - component: {fileID: 641876534}
+  - component: {fileID: 641876535}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -475,6 +547,22 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &641876535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641876531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73b0a95be81246699cf0d9ecdc01863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Unity::Fusion.EnableOnSingleRunner
+  PreferredRunner: 0
+  Components:
+  - {fileID: 641876532}
+  _guid: f23d13ec-756c-4b4f-
 --- !u!1 &939429008
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +575,7 @@ GameObject:
   - component: {fileID: 939429010}
   - component: {fileID: 939429009}
   - component: {fileID: 939429012}
+  - component: {fileID: 939429013}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -612,6 +701,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &939429013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939429008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73b0a95be81246699cf0d9ecdc01863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Unity::Fusion.EnableOnSingleRunner
+  PreferredRunner: 0
+  Components:
+  - {fileID: 939429009}
+  _guid: a6114e75-ff50-4bd2-
 --- !u!1 &1045424943
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +798,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1045424946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1470599486}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OnButtonJogar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1045424946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,19 +930,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1228978670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1470599486}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: OnButtonJogar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1228978670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,8 +1067,8 @@ RectTransform:
   - {fileID: 574807940}
   - {fileID: 2052286548}
   - {fileID: 1228978668}
-  - {fileID: 1045424944}
   - {fileID: 570240787}
+  - {fileID: 1045424944}
   - {fileID: 1564982569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -984,9 +1089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43c3d1cc440934c4587f1f843519712f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  menuClick: {fileID: 0}
-  menuPrincipal: {fileID: 0}
-  buttonJogar: {fileID: 0}
+  menuClick: {fileID: 1564982568}
+  menuPrincipal: {fileID: 570240786}
+  buttonJogar: {fileID: 1045424943}
 --- !u!1 &1564982568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,6 +1167,133 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564982568}
   m_CullTransparentMesh: 1
+--- !u!1 &1772593911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1772593915}
+  - component: {fileID: 1772593914}
+  - component: {fileID: 1772593913}
+  - component: {fileID: 1772593916}
+  m_Layer: 0
+  m_Name: Prototype Runner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1772593913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772593911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -232609262, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkEvents
+  OnInput:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInputMissing:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectedToServer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDisconnectedFromServer:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectRequest:
+    m_PersistentCalls:
+      m_Calls: []
+  OnConnectFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerJoined:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSimulationMessage:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShutdown:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSessionListUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCustomAuthenticationResponse:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHostMigration:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLoadDone:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSceneLoadStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReliableData:
+    m_PersistentCalls:
+      m_Calls: []
+  OnReliableProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectEnterAOI:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectExitAOI:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1772593914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772593911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1199893898, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.NetworkRunner
+--- !u!4 &1772593915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772593911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1772593916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772593911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8edbe7108d8a43ab838cf8b8d9453df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Unity::Fusion.RunnerEnableVisibility
 --- !u!1 &2052286547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,3 +1377,5 @@ SceneRoots:
   - {fileID: 641876533}
   - {fileID: 1470599485}
   - {fileID: 486632534}
+  - {fileID: 134333697}
+  - {fileID: 1772593915}
