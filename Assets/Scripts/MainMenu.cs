@@ -1,6 +1,8 @@
+using Fusion;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Fusion;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,7 +14,9 @@ public class MainMenu : MonoBehaviour
     public GameObject menuPrincipal;
 
     public GameObject buttonJogar;
-    
+
+
+    // Metodo MonoBehaviour
     private void Start()
     {
         clickAction = InputSystem.actions.FindAction("UI/Click"); // Click contem touch press
@@ -27,9 +31,12 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    // Metodo Button
     public void OnButtonJogar()
     {
         menuPrincipal.SetActive(false);
         buttonJogar.SetActive(false);
     }
+
+    
 }
