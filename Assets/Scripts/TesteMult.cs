@@ -2,10 +2,13 @@ using Fusion;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TesteMult : SimulationBehaviour
+public class TesteMult : SimulationBehaviour, IPlayerJoined
 {
     // Fusion
     public NetworkRunner runner;
+
+    // Unity
+    public GameObject playerfab;
 
     // Metodo de Encapsulamento
     public void NetworkStart()
@@ -23,5 +26,13 @@ public class TesteMult : SimulationBehaviour
             GameMode = GameMode.Shared,
         });
     }
-    
+
+    // Metodo IPlayerJoined
+    public void PlayerJoined(PlayerRef player)
+    {
+        if (player == runner.LocalPlayer)
+        {
+            runner.Spawn(playerfab, new Vector3(0, 1, 0), Quaternion.identity);
+        }
+    }
 }
